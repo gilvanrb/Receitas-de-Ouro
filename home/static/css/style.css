@@ -1,0 +1,150 @@
+/* Switch toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.4s ease;
+  }
+  
+  .slider i {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s ease, color 0.4s ease;
+    pointer-events: none;
+  }
+  
+  /* Quando o botão é checado, desliza o ícone */
+  input:checked + .slider i {
+    transform: translateX(24px);
+    color: #fdd835; /* amarelo sol */
+  }
+  
+  /* Cor de fundo no modo escuro */
+  input:checked + .slider {
+    background-color: #444;
+  }  
+  
+/* ======== TEMA CLARO (padrão) ======== */
+body.light-mode {
+    background-color: #88B04B;
+    color: #000000;
+  }
+  
+  body.light-mode .nav-top,
+  body.light-mode footer {
+    background-color: #FFA500;
+    color: #000000;
+  }
+  
+  body.light-mode .card {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  body.light-mode .btn-success {
+    background-color: #88B04B;
+    border-color: #88B04B;
+    color: black;
+  }
+
+  body.light-mode footer{
+    background-color: #FFA500;
+    border-top: 2px solid #FFA500;
+    color: white;
+  }
+  
+  /* ======== TEMA ESCURO ======== */
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  body.dark-mode .nav-top,
+  body.dark-mode footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+  
+  body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: white;
+  }
+  
+  body.dark-mode .btn-success {
+    background-color: #3c3c3c;
+    border-color: #444;
+    color: white;
+  }
+
+  body.dark-mode footer{
+    background-color: #222;
+    border-top: 2px solid #4444;
+    color: white;
+  }
+/*Geral*/
+body{
+    background-color: #88B04B;
+}
+.carousel-caption{
+    background-color: rgba(0, 0, 0, 0.534) !important;
+    border-radius: 10px !important;
+}
+.car-img{
+    max-height: 30em !important;
+}
+
+.nav-top{
+    background-color: #FFA500; /* Cor do cabeçalho*/
+}
+.nav-link{
+    color: white !important;
+    font-weight: bold !important;
+}
+.sec-receitas{ /*Ver receitas*/
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+    justify-content: center !important;
+    margin: 1% !important;
+    margin-bottom: 5em !important;
+}
+.card{
+    padding: 1% !important;
+    margin: 0% 1% 1% 0% !important;
+    text-align: center !important;
+}
+
+footer{ /*Borda inferior (footer)*/
+    background-color: #FFA500;
+    border-top: 1px solid #FFA500; /*Cor Borda inferior*/
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.8em !important;
+}
