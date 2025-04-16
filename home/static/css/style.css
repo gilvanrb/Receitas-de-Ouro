@@ -59,7 +59,7 @@ body.light-mode {
   
   body.light-mode .nav-top,
   body.light-mode footer {
-    background-color: #FFA500;
+    background-color: #f1ae30;
     color: #000000;
   }
   
@@ -75,9 +75,14 @@ body.light-mode {
   }
 
   body.light-mode footer{
-    background-color: #FFA500;
-    border-top: 2px solid #FFA500;
+    background-color: #f1ae30;
+    border-top: 2px solid #f1ae30;
     color: white;
+  }
+
+  body.light-mode .container {
+    background-color: #f1ae30;
+    box-shadow: 0px 0px 10px 10px rgb(0, 0, 0, 0.25);
   }
   
   /* ======== TEMA ESCURO ======== */
@@ -108,7 +113,13 @@ body.light-mode {
     border-top: 2px solid #4444;
     color: white;
   }
-/*Geral*/
+
+   body.dark-mode .container {
+    background-color: #1e1e1e;
+    color: white;
+    box-shadow: 0px 0px 10px 10px rgb(80, 79, 79);
+  }
+/*Geral, html*/
 body{
     background-color: #88B04B;
 }
@@ -121,7 +132,7 @@ body{
 }
 
 .nav-top{
-    background-color: #FFA500; /* Cor do cabeçalho*/
+    background-color: #f1ae30; /* Cor do cabeçalho*/
 }
 .nav-link{
     color: white !important;
@@ -138,13 +149,38 @@ body{
     padding: 1% !important;
     margin: 0% 1% 1% 0% !important;
     text-align: center !important;
+    box-shadow: 4px 4px 10px rgb(80, 79, 79); 
 }
 
 footer{ /*Borda inferior (footer)*/
-    background-color: #FFA500;
-    border-top: 1px solid #FFA500; /*Cor Borda inferior*/
+    background-color: #f1ae30;
+    border-top: 1px solid #f1ae30; /*Cor Borda inferior*/
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     padding: 0.8em !important;
 }
+
+
+
+/*Página de receitas*/
+
+  .title{
+    font-weight: bold !important;
+    padding-left: 30px;
+  }
+
+  .container{
+    background-color: #f1ae30;
+    border-radius: 2em;
+    border: 1px;
+    text-align: left;
+    padding: 2em;
+    margin: 3em;
+    margin-bottom: 7em;
+    
+  }
+  .texto{
+    padding-left: 30px;
+  }
+
