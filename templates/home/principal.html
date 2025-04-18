@@ -43,56 +43,46 @@
     </button>
 </div>
 
-<section class="row sec-receitas" id="receitas">
-    <div class="card col-3" style="width:300px">
-        <img class="card-img-top" src="{% static 'img/feijoada2.jpg' %}" alt="Card image">
-        <div class="card-body">
-            <h4 class="card-title">Feijoada</h4>
-            <p class="card-text">
-                Um clássico da nossa culinária,
-                a feijoada é um prato que possui algumas variações,
-                mas todas bem deliciosas!... </p>
-            <a href="{% url 'ver_receitas' %}" class="btn btn-success btn-card">Ver Receitas</a>
+
+
+<!-- cARROCEL CARDS -->
+<!-- CARROSSEL DE CARDS DE RECEITAS -->
+<!-- Carrodel Cards -->
+<div id="carousel-receitas" class="carousel slide">
+    <div class="carousel-inner">
+      {% for receita in receitas %}
+        {% if forloop.first or forloop.counter0|divisibleby:4 %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <div class="row justify-content-center">
+        {% endif %}
+  
+            <div class="card col-md-3 mx-2" style="width: 300px;">
+              <img class="card-img-top" src="{{ receita.imagem.url }}" alt="{{ receita.titulo }}"
+                style="height: 200px; object-fit: cover;">
+              <div class="card-body">
+                <h4 class="card-title">{{ receita.titulo }}</h4>
+                <p class="card-text">{{ receita.descricao|truncatewords:20 }}</p>
+                <a href="/receita/{{receita.id}}" class="btn btn-success">Ver Receitas</a>
+              </div>
+            </div>
+  
+        {% if forloop.counter|divisibleby:4 or forloop.last %}
+          </div>
         </div>
+        {% endif %}
+      {% endfor %}
     </div>
-    <div class="card col-3" style="width:275px">
-        <img class="card-img-top" src="{% static 'img/arrozcompequii.jpg' %}" alt="Card image">
-        <div class="card-body">
-            <h4 class="card-title">Arroz com Pequi</h4>
-            <p class="card-text">
-                “O arroz com pequi é
-                mais que um prato”
-                é uma memória afetiva
-                para quem cresceu no
-                cerrado. </p>
-            <a href="{% url 'ver_receitas' %}" class="btn btn-success">Ver Receitas</a>
-        </div>
-    </div>
-    <div class="card col-3" style="width:300px">
-        <img class="card-img-top" src="{% static 'img/cuscuz.jpg' %}" alt="Card image">
-        <div class="card-body">
-            <h4 class="card-title">Cuscuz Simples</h4>
-            <p class="card-text">
-                Se você procura uma opção
-                prática e saborosa para
-                complementar o seu café
-                da manhã ou lanche cuscuz é uma excelente opção.</p>
-            <a href="{% url 'ver_receitas' %}" class="btn btn-success">Ver Receitas</a>
-        </div>
-    </div>
-    <div class="card col-3" style="width:300px">
-        <img class="card-img-top" src="{% static 'img/bolo de milho.jpg' %}" alt="Card image">
-        <div class="card-body">
-            <h4 class="card-title">Bolo de milho</h4>
-            <p class="card-text">
-                O bolo é uma verdadeira
-                homenagem aos sabores
-                tradicionais da culinária
-                brasileira.</p>
-            <a href="{% url 'ver_receitas' %}" class="btn btn-success">Ver Receitas</a>
-        </div>
-    </div>
-</section>
+  
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-receitas" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel-receitas" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+
 
 
 {% endblock %}

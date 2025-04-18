@@ -1,8 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+
+from .models import Receitas
 
 def home(request):
-    return render(request, 'home/principal.html')
-
+    receitas = Receitas.objects.all()
+    return render(request, 'home/principal.html', {'receitas': receitas})
 # Create your views here.
-def ver_receitas(request):
-    return render(request, 'home/receitas.html')
+
+def ver_receitas(request, id):
+    receita = get_object_or_404(Receitas, pk=id)
+    return render(request, 'home/receitas.html', {'receitas': receita})

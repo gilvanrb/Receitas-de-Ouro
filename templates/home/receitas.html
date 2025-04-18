@@ -1,51 +1,23 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
-{% block title %} Receitas{% endblock%}
+{% block title %} Receitas {% endblock %}
 
 {% block content %}
 
-<img src="{% static 'img/feijoada.jpg' %}" alt="Feijoada" class="d-block w-100 car-img">
+{% if receitas.imagem %}
+    <img src="{{ receitas.imagem.url }}" alt="{{ receitas.titulo }}" class="d-block w-100 car-img">
+{% endif %}
 
-<div class="container =">
+<div class="container">
     <div class="ingredientes">
-        <p class="title">Ingredientes</p>
-        <p class="texto">
-            1 Kg de feijão preto <br>
-            100 g de carne seca <br>
-            70 g de orelha de porco <br>
-            70 g de rabo de porco <br>
-            70 g de pé de porco <br>
-            100 g de costelinha de porco <br>
-            50 g de lombo de porco <br>
-            100 g de paio <br>
-            150 g de lingüiça portuguesa <br>
-            2 cebolas grandes picadinhas <br>
-            1 maço de cebolinha verde picadinha <br>
-            3 folhas de louro <br>
-            6 dentes de alho <br>
-            Pimenta do reino a gosto <br>
-            1 ou 2 laranjas <br>
-            40 ml de de pinga <br>
-            Sal se precisar <br>
-        </p>
+        <p class="title">{{ receitas.titulo }}</p>
+        <p class="texto">{{ receitas.ingredientes|linebreaks }}</p>
     </div>
+
     <div class="Modo_de_Preparo">
         <p class="title">Modo de Preparo</p>
-        <p class="texto">Modo de preparo : 2h 20min <br>
-            1. Coloque as carnes de molho por 36 horas ou mais, vá trocando a água várias vezes, se for ambiente quente ou verão, coloque gelo por cima ou em camadas frias. <br>
-            
-            2. Coloque para cozinhar passo a passo: as carnes duras, em seguida as carnes moles. <br>
-            
-            3. Quando estiver mole coloque o feijão, e retire as carnes. <br>
-            
-            4. Finalmente tempere o feijão. <br>
-            
-            5. Acompanhamentos <br>
-            Couve, arroz branco, laranja, bistecas, farofa, quibebe de abóbora, baião de dois, bacon, torresmo, lingüicinha e caldinho temperado - copinhos.
-
-        </p>
+        <p class="texto">{{ receitas.preparo|linebreaks }}</p>
     </div>
 </div>
 
