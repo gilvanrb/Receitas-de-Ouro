@@ -6,6 +6,7 @@ class Receitas(models.Model):
     ingredientes = models.TextField()
     preparo = models.TextField()
     imagem = models.ImageField(upload_to='recetas/', null = True, blank=True)
+    video_url = models.URLField(null=True, blank=True, help_text="Insira a URL do videdo de preparo (Youtube, etc.)")
 
     def __str__(self):
         return self.titulo

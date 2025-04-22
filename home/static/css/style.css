@@ -128,7 +128,7 @@ body{
     border-radius: 10px !important;
 }
 .car-img{
-    max-height: 30em !important;
+    max-height: 36em !important;
 }
 
 .nav-top{
@@ -138,18 +138,63 @@ body{
     color: white !important;
     font-weight: bold !important;
 }
-.sec-receitas{ /*Ver receitas*/
-    margin-left: 10% !important;
-    margin-right: 10% !important;
-    justify-content: center !important;
-    margin: 1% !important;
-    margin-bottom: 5em !important;
+
+#carousel-receitas {
+  margin-left: 10% !important;
+  margin-right: 10% !important;
+  justify-content: center !important;
 }
-.card{
-    padding: 1% !important;
-    margin: 0% 1% 1% 0% !important;
-    text-align: center !important;
-    box-shadow: 4px 4px 10px rgb(80, 79, 79); 
+.card {
+  margin: 1% 4% 5% !important;
+  text-align: center !important;
+  box-shadow: 4px 4px 10px rgb(80, 79, 79);
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 150px;
+  padding: 1em;
+  text-align: center;
+}
+
+.card-title {
+  margin-bottom: 0.5em;
+}
+.card-img-top{
+  margin-top: 6%;
+}
+.card-text {
+  margin-bottom: 2em;
+  flex-grow: 1;
+}
+
+.card-body .btn-success {
+  align-self: center;
+  width: 100%; 
+}
+/* Style video */
+.video-container {
+  margin-top: 20px;
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.embed-responsive-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
 }
 
 footer{ /*Borda inferior (footer)*/

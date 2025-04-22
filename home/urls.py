@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.home, name='principal'),
-    path('receitas/<int:id>', views.ver_receitas, name= 'ver_receitas')
+    path('receita/<int:id>', views.ver_receitas, name= 'ver_receitas')
 ]
 
 if settings.DEBUG:

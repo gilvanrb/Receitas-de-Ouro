@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load custom_filters %}
 {% block title %} Receitas {% endblock %}
 
 {% block content %}
@@ -10,14 +10,37 @@
 {% endif %}
 
 <div class="container">
+    {% if receitas.video_url %}
+    <div class="video-container">
+     <p class="title">Vídeo de Preparo</p>
+        <div class="embed-responsive embed-responsive-16by9">
+        <iframe
+            class="embed-responsive-item"
+            src="{{ receitas.video_url|youtube_embed }}"
+            allowfullscreen>
+        </iframe>
+        </div>
+    </div>
+  {% endif %}
     <div class="ingredientes">
         <p class="title">{{ receitas.titulo }}</p>
-        <p class="texto">{{ receitas.ingredientes|linebreaks }}</p>
+        <ul class="texto">
+            {% for linha in receitas.ingredientes.splitlines %}
+                {% if linha %}
+                <li>{{ linha }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
     </div>
-
     <div class="Modo_de_Preparo">
         <p class="title">Modo de Preparo</p>
-        <p class="texto">{{ receitas.preparo|linebreaks }}</p>
+        <ol class="texto">
+            {% for passo in receitas.preparo.splitlines %}
+                {% if passo %}
+                <li>{{ passo }}</li>
+                {% endif %}
+            {% endfor %}
+        </ol>
     </div>
 </div>
 
