@@ -120,9 +120,7 @@ body.light-mode {
     box-shadow: 0px 0px 10px 10px rgb(80, 79, 79);
   }
 /*Geral, html*/
-body{
-    background-color: #88B04B;
-}
+
 .carousel-caption{
     background-color: rgba(0, 0, 0, 0.534) !important;
     border-radius: 10px !important;
@@ -130,14 +128,30 @@ body{
 .car-img{
     max-height: 36em !important;
 }
-
-.nav-top{
-    background-color: #f1ae30; /* Cor do cabeçalho*/
-}
 .nav-link{
     color: white !important;
+    padding: 0.7em !important;
     font-weight: bold !important;
 }
+.nav-link {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.nav-link:hover { /*HOVER NOS NOME HOME E RECEITAS*/
+  transform: scale(1.2); /* aumenta o tamanho levemente */
+  filter: brightness(1.2); /* deixa mais brilhante */
+  cursor: pointer; /* muda o cursor para parecer clicável */
+}
+.logo {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover { /*HOVER NO LOGOTIPO RECEITAS DE OURO*/
+  transform: scale(1.1); /* aumenta o tamanho levemente */
+  filter: brightness(1.2); /* deixa mais brilhante */
+  cursor: pointer; /* muda o cursor para parecer clicável */
+}
+
 
 #carousel-receitas {
   margin-left: 10% !important;
@@ -148,31 +162,41 @@ body{
   margin: 1% 4% 5% !important;
   text-align: center !important;
   box-shadow: 4px 4px 10px rgb(80, 79, 79);
+  height: 500px; /* altura fixa para todos os cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.card-img-top {
+  margin-top: 6%;
+  height: 180px; /* altura fixa para a imagem */
+  object-fit: cover; /* garante que a imagem se encaixe bem */
+}
+
 .card-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 150px;
   padding: 1em;
   text-align: center;
+  flex-grow: 1;
 }
 
 .card-title {
   margin-bottom: 0.5em;
 }
-.card-img-top{
-  margin-top: 6%;
-}
+
 .card-text {
   margin-bottom: 2em;
-  flex-grow: 1;
+  flex-grow: 1; /* isso ajuda a empurrar o botão para o final */
 }
 
 .card-body .btn-success {
   align-self: center;
-  width: 100%; 
+  width: 100%;
 }
+
 /* Style video */
 .video-container {
   margin-top: 20px;
@@ -203,7 +227,7 @@ footer{ /*Borda inferior (footer)*/
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 0.8em !important;
+    padding: 0.7em !important;
 }
 
 

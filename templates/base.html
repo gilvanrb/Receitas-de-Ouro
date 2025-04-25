@@ -21,16 +21,13 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="mynavbar">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#receitas">Receitas</a>
-                        </li>
-                    </ul>
+                    <div class="d-flex align-items-center mx-auto gap-3">
+                        <a class="nav-link" href="/">Home</a>
+                        <img class="logo img-fluid" src="{% static 'img/logotipo.png'%}" alt="logotipo" width="70">
+                        <a class="nav-link" href="#carousel-receitas">Receitas</a>
+                    </div>
 
-                    <!-- Botão tema -->
+                    <!-- Botão tema / MODO ESCURO -->
                     <label class="switch">
                         <input type="checkbox" id="toggle-theme">
                         <span class="slider">

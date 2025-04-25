@@ -8,7 +8,7 @@
 {% if receitas.imagem %}
     <img src="{{ receitas.imagem.url }}" alt="{{ receitas.titulo }}" class="d-block w-100 car-img">
 {% endif %}
-
+<!--DIV DO VIDEO-->
 <div class="container">
     {% if receitas.video_url %}
     <div class="video-container">
@@ -22,6 +22,7 @@
         </div>
     </div>
   {% endif %}
+  <!--DIV DOS INGREDIENTES-->
     <div class="ingredientes">
         <p class="title">{{ receitas.titulo }}</p>
         <ul class="texto">
@@ -32,6 +33,7 @@
             {% endfor %}
         </ul>
     </div>
+    <!--DIV DO MODO DE PREPARO-->
     <div class="Modo_de_Preparo">
         <p class="title">Modo de Preparo</p>
         <ol class="texto">
