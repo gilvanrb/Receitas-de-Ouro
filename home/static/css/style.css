@@ -4,15 +4,15 @@
     display: inline-block;
     width: 50px;
     height: 26px;
-  }
-  
-  .switch input {
+}
+
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .slider {
+}
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -22,9 +22,9 @@
     background-color: #ccc;
     border-radius: 34px;
     transition: background-color 0.4s ease;
-  }
-  
-  .slider i {
+}
+
+.slider i {
     position: absolute;
     left: 4px;
     top: 4px;
@@ -38,87 +38,99 @@
     border-radius: 50%;
     transition: transform 0.4s ease, color 0.4s ease;
     pointer-events: none;
-  }
-  
-  /* Quando o botão é checado, desliza o ícone */
-  input:checked + .slider i {
+}
+
+/* Quando o botão é checado, desliza o ícone */
+input:checked + .slider i {
     transform: translateX(24px);
     color: #fdd835; /* amarelo sol */
-  }
-  
-  /* Cor de fundo no modo escuro */
-  input:checked + .slider {
+}
+
+/* Cor de fundo no modo escuro */
+input:checked + .slider {
     background-color: #444;
-  }  
-  
+}
+
 /* ======== TEMA CLARO (padrão) ======== */
 body.light-mode {
     background-color: #88B04B;
     color: #000000;
-  }
-  
-  body.light-mode .nav-top,
-  body.light-mode footer {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adicionada transição */
+}
+
+body.light-mode .nav-top,
+body.light-mode footer {
     background-color: #f1ae30;
     color: #000000;
-  }
-  
-  body.light-mode .card {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adicionada transição */
+}
+
+body.light-mode .card {
     background-color: #ffffff;
     color: #000000;
-  }
-  
-  body.light-mode .btn-success {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adicionada transição */
+}
+
+body.light-mode .btn-success {
     background-color: #88B04B;
     border-color: #88B04B;
     color: black;
-  }
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Adicionada transição */
+}
 
-  body.light-mode footer{
+body.light-mode footer{
     background-color: #f1ae30;
     border-top: 2px solid #f1ae30;
     color: white;
-  }
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Adicionada transição */
+}
 
-  body.light-mode .container {
+body.light-mode .container {
     background-color: #f1ae30;
     box-shadow: 0px 0px 10px 10px rgb(0, 0, 0, 0.25);
-  }
-  
-  /* ======== TEMA ESCURO ======== */
-  body.dark-mode {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Adicionada transição */
+}
+
+/* ======== TEMA ESCURO ======== */
+body.dark-mode {
     background-color: #121212;
     color: #ffffff;
-  }
-  
-  body.dark-mode .nav-top,
-  body.dark-mode footer {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adicionada transição */
+}
+
+body.dark-mode .nav-top,
+body.dark-mode footer {
     background-color: #1a1a1a;
     color: #ffffff;
-  }
-  
-  body.dark-mode .card {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adicionada transição */
+}
+
+body.dark-mode .card {
     background-color: #1e1e1e;
     color: white;
-  }
-  
-  body.dark-mode .btn-success {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Adicionada transição */
+}
+
+body.dark-mode .btn-success {
     background-color: #3c3c3c;
     border-color: #444;
     color: white;
-  }
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Adicionada transição */
+}
 
-  body.dark-mode footer{
+body.dark-mode footer{
     background-color: #222;
     border-top: 2px solid #4444;
     color: white;
-  }
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Adicionada transição */
+}
 
-   body.dark-mode .container {
+body.dark-mode .container {
     background-color: #1e1e1e;
     color: white;
     box-shadow: 0px 0px 10px 10px rgb(80, 79, 79);
-  }
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Adicionada transição */
+}
 /*Geral, html*/
 
 .carousel-caption{
@@ -132,93 +144,94 @@ body.light-mode {
     color: white !important;
     padding: 0.7em !important;
     font-weight: bold !important;
+    transition: color 0.3s ease; /* Adicionada transição */
 }
-.nav-link {
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
 .nav-link:hover { /*HOVER NOS NOME HOME E RECEITAS*/
-  transform: scale(1.2); /* aumenta o tamanho levemente */
-  filter: brightness(1.2); /* deixa mais brilhante */
-  cursor: pointer; /* muda o cursor para parecer clicável */
+    transform: scale(1.2); /* aumenta o tamanho levemente */
+    filter: brightness(1.2); /* deixa mais brilhante */
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Garante que o hover também tenha transição */
 }
 .logo {
-  transition: transform 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Adicionada transição */
 }
 
 .logo:hover { /*HOVER NO LOGOTIPO RECEITAS DE OURO*/
-  transform: scale(1.1); /* aumenta o tamanho levemente */
-  filter: brightness(1.2); /* deixa mais brilhante */
-  cursor: pointer; /* muda o cursor para parecer clicável */
+    transform: scale(1.1); /* aumenta o tamanho levemente */
+    filter: brightness(1.2); /* deixa mais brilhante */
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Garante que o hover também tenha transição */
 }
 
 
 #carousel-receitas {
-  margin-left: 10% !important;
-  margin-right: 10% !important;
-  justify-content: center !important;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+    justify-content: center !important;
 }
 .card {
-  margin: 1% 4% 5% !important;
-  text-align: center !important;
-  box-shadow: 4px 4px 10px rgb(80, 79, 79);
-  height: 500px; /* altura fixa para todos os cards */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    margin: 1% 4% 5% !important;
+    text-align: center !important;
+    box-shadow: 4px 4px 10px rgb(80, 79, 79);
+    height: 500px; /* altura fixa para todos os cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Adicionada transição */
 }
 
 .card-img-top {
-  margin-top: 6%;
-  height: 180px; /* altura fixa para a imagem */
-  object-fit: cover; /* garante que a imagem se encaixe bem */
+    margin-top: 6%;
+    height: 180px; /* altura fixa para a imagem */
+    object-fit: cover;
 }
 
 .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1em;
-  text-align: center;
-  flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    text-align: center;
+    flex-grow: 1;
 }
 
 .card-title {
-  margin-bottom: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .card-text {
-  margin-bottom: 2em;
-  flex-grow: 1; /* isso ajuda a empurrar o botão para o final */
+    margin-bottom: 2em;
+    flex-grow: 1; /* isso ajuda a empurrar o botão para o final */
 }
 
 .card-body .btn-success {
-  align-self: center;
-  width: 100%;
+    align-self: center;
+    width: 100%;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Adicionada transição */
 }
 
 /* Style video */
 .video-container {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .embed-responsive {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 0;
-  overflow: hidden;
-  padding-top: 56.25%;
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    padding-top: 56.25%;
 }
 
 .embed-responsive-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
 }
 
 footer{ /*Borda inferior (footer)*/
@@ -228,18 +241,20 @@ footer{ /*Borda inferior (footer)*/
     align-items: center !important;
     justify-content: center !important;
     padding: 0.7em !important;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Adicionada transição */
 }
 
 
 
 /*Página de receitas*/
 
-  .title{
+.title{
     font-weight: bold !important;
     padding-left: 30px;
-  }
+    transition: color 0.3s ease; /* Adicionada transição */
+}
 
-  .container{
+.container{
     background-color: #f1ae30;
     border-radius: 2em;
     border: 1px;
@@ -247,16 +262,15 @@ footer{ /*Borda inferior (footer)*/
     padding: 2em;
     margin: 3em;
     margin-bottom: 7em;
-    
-  }
-  .texto{
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Adicionada transição */
+}
+.texto{
     padding-left: 30px !important;
-  }
-
-@media (max-width: 768px){
-  #carousel-receitas {
-    margin-bottom: 4em !important;
-  }
+    transition: color 0.3s ease; /* Adicionada transição */
 }
 
-
+@media (max-width: 768px){
+    #carousel-receitas {
+    margin-bottom: 4em !important;
+    }
+}
